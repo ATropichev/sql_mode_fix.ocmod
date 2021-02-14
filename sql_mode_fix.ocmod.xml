@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Disable NO_ZERO_IN_DATE sql_mode</name>
+    <code>NO_ZERO_IN_DATE_sql_mode_fix</code>
+    <version>1.0</version>
+    <date>14.02.2021</date>
+    <author>ATropichev</author>
+    <link>https://github.com/ATropichev</link>
+
+     <file path="system/library/db/mysqli.php">
+        <operation>
+            <search><![CDATA[
+                $this->connection->query("SET SESSION sql_mode = 'NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION'");
+            ]]></search>
+            <add position="replace"><![CDATA[
+                $this->connection->query("SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION'");
+            ]]></add>
+        </operation>
+    </file>
+</modification>
