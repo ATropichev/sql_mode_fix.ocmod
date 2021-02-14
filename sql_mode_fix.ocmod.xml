@@ -5,7 +5,7 @@
     <version>1.0</version>
     <date>14.02.2021</date>
     <author>ATropichev</author>
-    <link>https://github.com/ATropichev</link>
+    <link>https://github.com/ATropichev/sql_mode_fix.ocmod</link>
 
      <file path="system/library/db/mysqli.php">
         <operation>
